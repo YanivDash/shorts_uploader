@@ -1,0 +1,32 @@
+name: YouTube Automation
+
+on:
+  workflow_dispatch: # You can trigger manually
+  schedule:
+    - cron: "0 10 * * *" # Optional: runs daily at 10 AM UTC
+
+jobs:
+  run-bot:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.10"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run Script
+        env:
+          YT_TOKEN_FAMILY: ${{ secrets.YT_TOKEN_FAMILY }}
+          YT_TOKEN_SITCOM: ${{ secrets.YT_TOKEN_SITCOM }}
+          YT_TOKEN_SALSA: ${{ secrets.YT_TOKEN_SALSA }}
+        run: |
+          python main.py
