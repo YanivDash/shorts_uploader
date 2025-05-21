@@ -10,7 +10,7 @@ channels:
     client_secret: client_secret.json
     token_env: YT_TOKEN_FAMILY
     download_count: 1
-    upload_count: 1
+    upload_count: 0
     max_attempts: 10
     sleep_between: 3
     sort: d
@@ -27,7 +27,7 @@ channels:
     client_secret: client_secret.json
     token_env: YT_TOKEN_SITCOM
     download_count: 1
-    upload_count: 1
+    upload_count: 0
     max_attempts: 10
     sleep_between: 3
     sort: p
@@ -44,7 +44,7 @@ channels:
     client_secret: client_secret.json
     token_env: YT_TOKEN_SALSA
     download_count: 1
-    upload_count: 1
+    upload_count: 0
     max_attempts: 10
     sleep_between: 3
     sort: p
