@@ -1,0 +1,54 @@
+# Configuration for YouTube Shorts Automation
+# Define each channel with its own settings and base folder
+
+channels:
+  - name: familyclips4154
+    base_folder: data/familyclips4154
+    channel_url: https://www.youtube.com/@familyclips4154/shorts
+    links_file: shorts_links.txt
+    video_folder: videos
+    client_secret: client_secret.json
+    token_env: YT_TOKEN_FAMILY
+    download_count: 1
+    upload_count: 1
+    max_attempts: 10
+    sleep_between: 3
+    sort: d
+    category_id: "23"
+    tags:
+      - shorts
+      - familyguyclips
+
+  - name: sitcomhub
+    base_folder: data/sitcomhub
+    channel_url: https://www.youtube.com/@sitcomhub/shorts
+    links_file: shorts_links.txt
+    video_folder: videos
+    client_secret: client_secret.json
+    token_env: YT_TOKEN_SITCOM
+    download_count: 1
+    upload_count: 1
+    max_attempts: 10
+    sleep_between: 3
+    sort: p
+    category_id: "23"
+    tags:
+      - shorts
+      - DramaClipsTheory
+
+  - name: SalsaClassic-b8s
+    base_folder: data/SalsaClassic-b8s
+    channel_url: https://www.youtube.com/@SalsaClassic-b8s/shorts
+    links_file: shorts_links.txt
+    video_folder: videos
+    client_secret: client_secret.json
+    token_env: YT_TOKEN_SALSA
+    download_count: 1
+    upload_count: 1
+    max_attempts: 10
+    sleep_between: 3
+    sort: p
+    category_id: "22"
+    tags:
+      - shorts
+      - gameofThrones
